@@ -13,4 +13,26 @@ header{
   width: 100%;
   height: 48px;
   background: #fdf0f0;
+  position: relative;
+}
+header .h-tu{
+  width: 382px;
+  height: 100%;
+  border:1px solid salmon;
+  position: absolute;
+}
+@media screen and (min-width: 1200px){
+  header .h-tu{
+    right:445px;
+  }
+}
+@media screen and (min-width: 960px){
+  header .h-tu{
+    right:245px;
+  }
+}
+@media screen and (max-width: 960px){
+  header .h-tu{
+    display: none;
+  }
 }
