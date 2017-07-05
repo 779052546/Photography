@@ -28,12 +28,12 @@ header .h-tu{
 }
 @media screen and (min-width: 1000px) and (max-width: 1200px){
   header .h-tu{
-    right:200px;
+    right:18%;
   }
 }
 @media screen and (min-width: 960px) and (max-width: 1000px){
   header .h-tu{
-    right:0px;
+    right:0%;
   }
 }
 @media screen and (max-width: 960px){
@@ -79,4 +79,21 @@ footer .f-top{
   width: 100%;
   height: 440px;
   background: #fbfbfb;
+  padding:40px 0;
+}
+footer .f-top .f-contant{
+  border:1px solid #dbdbdb;
+  width: 90%;
+  margin:0px 4%;
+  height: 360px;
+  border-sizing:border-box;
+  position: relative;
+}
+footer .f-top .f-contant{
+
+}
+footer .f-bottom{
+  width: 100%;
+  height: 540px;
+  background: #fdf0f0;
 }
