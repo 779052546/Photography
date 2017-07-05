@@ -51,6 +51,15 @@
     #desc p.address .slagshipStore{
         margin-left:40px;
     }
+    .erweima{
+        height:300px;
+        position: relative;
+        top:50px;
+    }
+    .erweima img{
+        display: block;
+        margin:0 auto;
+    }
 </style>
 <script src="http://api.map.baidu.com/api?v=1.2" type="text/javascript"></script>
 <script type="text/javascript">
@@ -63,7 +72,7 @@
         map.addControl(new BMap.OverviewMapControl());
         var point =new BMap.Point(112.415611, 34.661086);
         map.centerAndZoom(point,15);
-        var infoWindow = new BMap.InfoWindow("洛阳他她婚纱摄影");    // 创建信息窗口对象
+        var infoWindow = new BMap.InfoWindow("洛阳他她婚纱摄影 <br> 洛阳市涧西区辽宁路 <br> 华阳商铺2期115-116号");    // 创建信息窗口对象
         map.openInfoWindow(infoWindow,point);                 //开启信息窗口
         var marker = new BMap.Marker(point);
         map.addOverlay(marker);
@@ -99,5 +108,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="erweima">
+        <img src="/images/Story/TataWeixin.gif" alt="">
     </div>
 </section>
