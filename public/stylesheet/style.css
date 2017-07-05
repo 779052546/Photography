@@ -16,9 +16,9 @@ header{
   position: relative;
 }
 header .h-tu{
-  width: 382px;
+  width: 390px;
   height: 100%;
-  border:1px solid salmon;
+  /*border:1px solid salmon;*/
   position: absolute;
 }
 @media screen and (min-width: 1200px){
@@ -26,13 +26,57 @@ header .h-tu{
     right:445px;
   }
 }
-@media screen and (min-width: 960px){
+@media screen and (min-width: 1000px) and (max-width: 1200px){
   header .h-tu{
-    right:245px;
+    right:200px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1000px){
+  header .h-tu{
+    right:0px;
   }
 }
 @media screen and (max-width: 960px){
   header .h-tu{
     display: none;
   }
+}
+header a{
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  /*border:1px solid red;*/
+  text-decoration: none;
+  margin-right:25px;
+  color:rgba(0,0,0,0.7);
+  font-size:13px;
+}
+header .h-tu div{
+  display: inline-block;
+  width: 36px;
+  height: 29px;
+  /*border:1px solid lime;*/
+  margin-bottom:-5px;
+  background: url("../images/icon00.png") no-repeat -10px 0;
+}
+header .h-tu div.h-weixin{
+  background-position: -88px 0;
+}
+header .h-tu div.h-qq{
+  background-position: -47px 0;
+}
+header .h-tu span.h-tel{
+  display: inline-block;
+  width: 148px;
+  /*border:1px solid lime;*/
+  height: 48px;
+  line-height: 48px;
+  position: absolute;
+  font-size:18px;
+}
+/*页脚footer*/
+footer .f-top{
+  width: 100%;
+  height: 440px;
+  background: #fbfbfb;
 }
