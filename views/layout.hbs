@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-     <title>{{title}}</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel='stylesheet' href='/stylesheet/style.css' />
-      <link rel="stylesheet" href="/stylesheet/bootstrap.min.css">
-      <!--<script src="/js/bootstrap.min.js"></script>-->
+<head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheet/style.css' />
+    <!--<link rel="stylesheet" href="/stylesheet/bootstrap.min.css">-->
+    <!--<script src="/js/bootstrap.min.js"></script>-->
+</head>
+<body>
+<header>
+    <div class="h-tu">
+        <a href="http://weibo.com/p/1006062831754325/home?from=page_100606&mod=TAB" title="官方微博"><div class="h-weibo"></div>WEIBO</a>
+        <a href="http://www.lytata.com/Index/WeiXin" title="关注微信"><div class="h-weixin"></div>WECHAT</a>
+        <a href="http://shang.qq.com/open_webaio.html?sigt=ece5b67bb74630498a4c298248cf78ed46076ade329fdfb1319772e6db4b51f8d62712eac96b84f0d91755c5e3fc9d2e&sigu=eae1f41801109e5c55b848cd2a801450228c543c31a4861afb8d7f7f5b9499a9081dacef4f2f6693&tuin=800168025" title="QQ800168025"> <div class="h-qq"></div>QQ</a>
 
-  </head>
-  <body>
-    <header>
-         <div class="h-tu">
-             <a href="http://weibo.com/p/1006062831754325/home?from=page_100606&mod=TAB" title="官方微博">WEIBO</a>
-             <a href="http://www.lytata.com/Index/WeiXin" title="关注微信">WECHAT</a>
-             <a href="http://shang.qq.com/open_webaio.html?sigt=ece5b67bb74630498a4c298248cf78ed46076ade329fdfb1319772e6db4b51f8d62712eac96b84f0d91755c5e3fc9d2e&sigu=eae1f41801109e5c55b848cd2a801450228c543c31a4861afb8d7f7f5b9499a9081dacef4f2f6693&tuin=800168025" title="QQ800168025">QQ</a>
-             <span>400-0520-356</span>
-         </div>
-    </header>
-    {{{body}}}
-    <footer>
-        <div class="f-top">
-
+        <span class="h-tel">400-0520-356</span>
+    </div>
+</header>
+{{{body}}}
+<footer>
+    <div class="f-top">
+        <div class="f-contant">
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <a href="#top"></a>
+            <p class="f-tel"><span></span></p>
+            <div class="f-content">
+                <div class="left">
+                    <img src="../images/Gifts.png" alt="">
+                </div>
+                <div class="right">
+                    <p>为了确保您及时收到信息，请务必保持手机畅通，我们将在第一时间与您联系！</p>
+                    <from>
+                        <p>姓名：<input type="text"></p>
+                        <p>手机：<input type="password"></p>
+                        <p><button>注册领取</button></p>
+                    </from>
+                </div>
+            </div>
         </div>
-        <div class="f-bottom">
+    </div>
+    <div class="f-bottom">
 
-        </div>
-    </footer>
-    <script src="/js/jquery.min.js"></script>
-    {{{block 'jquery'}}}
-    <script src="/js/bootstrap.min.js"></script>
-    {{{block 'bootstrap'}}}
-  </body>
+    </div>
+</footer>
+<script src="/js/jquery.min.js"></script>
+{{{block 'jquery'}}}
+<script src="/js/bootstrap.min.js"></script>
+{{{block 'bootstrap'}}}
+</body>
 </html>
