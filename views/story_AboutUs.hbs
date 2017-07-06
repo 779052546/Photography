@@ -2,6 +2,17 @@
     section{
         padding: 30px 0 30px 0;
     }
+    .ngbox a{
+        width: 502px;
+        height:100px;
+        padding-top:20px;
+        float: left;
+    }
+    .ngbox a>img{
+        display: block;
+        margin: 0 auto;
+
+    }
     #map{
         max-width:1005px;
         height:580px;
@@ -11,17 +22,6 @@
         margin-top: 20px;
         position: relative;
     }
-    /*section p{*/
-        /*position: absolute;*/
-        /*left:55px;*/
-        /*overflow: hidden;*/
-    /*}*/
-    /*.address{*/
-        /*top:10px;*/
-    /*}*/
-    /*.Url{*/
-        /*!*top: 55px;*!*/
-    /*}*/
     @media(min-width:680px){
         #desc p{
             width: 400px;
@@ -81,6 +81,10 @@
 </script>
 <!-- 百度地图地图容器-->
 <section class="container">
+    <div class="ngbox container">
+        <a href="#!/ContactUs"><img src="/images/Story/brandStory.jpg" alt=""></a>
+        <a href="#!/AboutUs"><img src="/images/Story/contactUs.jpg" alt=""></a>
+    </div>
     <div id="map"></div>
     <div class="container-fluid about_ico">
         <div class="row-fluid">

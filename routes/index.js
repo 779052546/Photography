@@ -11,6 +11,9 @@ router.get('/story_ContactUs',function(req,res){
 router.get('/story_AboutUs',function(req,res){
     res.render('story_AboutUs', {});
 });
+// router.get('/Story',function(req,res){
+//     res.render('Story', {});
+// });
 
 router.get('/works',function(req,res){
     res.render('works', {images:[
