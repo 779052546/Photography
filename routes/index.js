@@ -15,7 +15,32 @@ router.get('/customer_Prise',function (req,res) {
     res.render('customer_Prise',{});
 })
 router.get('/video',function(req,res){
-    res.render('video', {});
+    res.render('video', {message:[
+        {
+            id:1,
+            name:'2015洛阳他她摄影全新启幕',
+            img:'http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150709100753956424071_920_500.gif',
+            video:'http://player.youku.com/player.php/sid/XMTI3OTg3MjIwOA==/v.swf'
+        },
+        {
+            id:2,
+            name:'洛阳他她摄影出品：7月预告片',
+            img:'http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150707074805077728713_920_500.jpg',
+            video:'http://player.youku.com/player.php/sid/XMTI3OTQyNDQ0MA==/v.swf'
+        },
+        {
+            id:3,
+            name:'洛阳他她摄影出品：6月花语系列花絮',
+            img:'http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150707072120914073715_920_500.jpg',
+            video:'http://player.youku.com/player.php/sid/XMTI3OTg3MjIwOA==/v.swf'
+        },
+        {
+            id:4,
+            name:'2015年2月洛阳他她摄影作品花絮',
+            img:'http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150709092256127127261_920_500.jpg',
+            video:'http://player.youku.com/player.php/sid/XMTI3OTg3MjIwOA==/v.swf'
+        },
+    ]});
 });
 
 router.get('/works',function(req,res){

@@ -1,4 +1,3 @@
-<link href="/stylesheet/video-js.css" rel="stylesheet" type="text/css">
 <style>
     *{
         margin:0;
@@ -69,47 +68,18 @@
     </div>
     <div class="allvideo">
         <ul>
-            <li>
-                <a href="#"><h2>2015洛阳他她摄影全新启幕</h2></a>
+            {{#each message}}
+            <li >
+                <a href="#"><h2>{{name}}</h2></a>
                 <div class="videoPicture">
-                    <a href="http://player.youku.com/player.php/sid/XMTI3OTg3MjIwOA==/v.swf">
+                    <a href="{{video}}">
                         <img src="/images/video/videoButton.png" alt="" class="videoButton">
-                        <img class="videoIco" src="http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150709100753956424071_920_500.gif" />
+                        <img class="videoIco" src="{{img}}" />
                     </a>
                 </div>
                 <p class="c_mark">洛阳他她影视出品</p>
             </li>
-            <li>
-                <a href="#"><h2>洛阳他她摄影出品：7月预告片</h2></a>
-                <div class="videoPicture">
-                    <a href="http://player.youku.com/player.php/sid/XMTI3OTQyNDQ0MA==/v.swf">
-                        <img src="/images/video/videoButton.png" alt="" class="videoButton">
-                        <img class="videoIco" src="http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150707074805077728713_920_500.jpg" />
-                    </a>
-                </div>
-                <p class="c_mark">洛阳他她影视出品</p>
-            </li>
-            <li>
-                <a href="#"><h2>洛阳他她摄影出品：6月花语系列花絮</h2></a>
-                <div class="videoPicture">
-                    <a href="http://player.youku.com/player.php/sid/XMTI3OTg3MjIwOA==/v.swf">
-                        <img src="/images/video/videoButton.png" alt="" class="videoButton">
-                        <img class="videoIco" src="http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150707072120914073715_920_500.jpg" />
-                    </a>
-                </div>
-                <p class="c_mark">洛阳他她影视出品</p>
-            </li>
-                <li>
-                <a href="#"><h2>2015年2月洛阳他她摄影作品花絮</h2></a>
-                <div class="videoPicture">
-                    <a href="http://player.youku.com/player.php/sid/XMTI3OTg3MjIwOA==/v.swf">
-                        <img src="/images/video/videoButton.png" alt="" class="videoButton">
-                        <img class="videoIco" src="http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150709092256127127261_920_500.jpg" />
-                    </a>
-                </div>
-                <p class="c_mark">洛阳他她影视出品</p>
-            </li>
+            {{/each}}
         </ul>
     </div>
 </div>
-<script src="/js/video.min.js"></script>
