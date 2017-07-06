@@ -18,7 +18,7 @@
     <!--<script src="/js/bootstrap.min.js"></script>-->
 </head>
 <body>
-<header>
+<header class="layout">
     <div class="h-tu">
         <a href="http://weibo.com/p/1006062831754325/home?from=page_100606&mod=TAB" title="官方微博"><div class="h-weibo"></div>WEIBO</a>
         <a href="http://www.lytata.com/Index/WeiXin" title="关注微信"><div class="h-weixin"></div>WECHAT</a>
@@ -27,7 +27,7 @@
         <span class="h-tel">400-0520-356</span>
     </div>
 </header>
-<nav>
+<nav class="layout" id="layout">
     <div class="nav">
         <div class="tata-logo">
             <img src="images/layout/logo.gif" alt="">
@@ -53,6 +53,7 @@
                         <div><a href="#">婚纱客片</a></div>
                         <div><a href="#">写真客片</a></div>
                         <div><a href="#">闺蜜照</a></div>
+                        <div><a href="#">孕妇亲子照</a></div>
                     </div>
                 </li>
                 <li id="l_huan"><a href="#">环球巡拍</a>
@@ -66,7 +67,7 @@
                 <li><a href="#">帮助中心</a></li>
             </ul>
             <script>
-                function showAndhide(outId,inId) {
+                function showAndhides(outId,inId) {
                     $(outId).mouseenter(function(){
                         $(inId).show();
                     });
@@ -74,10 +75,10 @@
                         $(inId).hide();
                     });
                 }
-                showAndhide('#l_pin','#pin_story');
-                showAndhide('#l_new','#new_activy');
-                showAndhide('#l_ke','#kepian');
-                showAndhide('#l_huan','#huanqiu');
+                showAndhides('#l_pin','#pin_story');
+                showAndhides('#l_new','#new_activy');
+                showAndhides('#l_ke','#kepian');
+                showAndhides('#l_huan','#huanqiu');
             </script>
         </div>
         <div class="bg"></div>
@@ -86,7 +87,7 @@
 
 
 {{{body}}}
-<footer>
+<footer class="layout">
     <div class="f-top">
         <div class="f-contant">
             <div class="b1 b"></div><div class="b2 b"></div><div class="b3 b"></div><div class="b4 b"></div>

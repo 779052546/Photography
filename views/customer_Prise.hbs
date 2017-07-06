@@ -1,0 +1,78 @@
+<style>
+    .customer_Prise{
+        width:844px;
+        margin:10px auto;
+        /*background: #a6e1ec;*/
+    }
+    .customer_Prise .cus-img{
+        width: 665px;
+        margin:40px auto;
+    }
+    .customer_Prise .cus-a{
+        width: 492px;
+        height: 60px;
+        line-height:86px;
+        /*background:#00B7FF;*/
+        margin:60px auto;
+    }
+    .customer_Prise .cus-a>div{
+        float: left;
+        text-align: center;
+        width: 90px;
+        height: 100%;
+        border-bottom:2px solid #e4cfcf;
+    }
+    .customer_Prise .cus-a>div:not(:last-child){
+        margin-right:96px;
+    }
+    .customer_Prise .cus-a a{
+        font-size:20px;
+        text-decoration: none;
+        color: rgba(0,0,0,0.6);
+        position: relative;
+    }
+    .customer_Prise .cus-a a:hover{
+        color:#e4cfcf;
+    }
+    .customer_Prise .cus-a a::before{
+        content:'{';
+        position: absolute;
+        left:-24px;
+        font-size:38px;
+        color:#e4cfcf;
+        font-weight: 100;
+    }
+    .customer_Prise .cus-a a::after{
+        content:'}';
+        position: absolute;
+        right:-24px;
+        font-size:38px;
+        color:#e4cfcf;
+    }
+    .customer_Prise .hurt{
+        width: 120px;
+        position: relative;
+        margin:-10px auto;
+    }
+    .customer_Prise .hurt::before{
+        content:'';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url("http://www.lytata.com/Content/Img/Web/Section11_03.gif" ) no-repeat;
+    }
+</style>
+<div class="customer_Prise">
+    <div class="cus-img">
+        <img src="/images/customer/customer.gif" alt="">
+    </div>
+    <div class="cus-a">
+        <div><a href="/http://www.lytata.com/PingLun/DZHP">大众好评</a></div>
+        <div><a href="/http://www.lytata.com/PingLun/DZHP">微信好评</a></div>
+        <div><a href="/http://www.lytata.com/PingLun/DZHP">微博好评</a></div>
+    </div>
+    <div class="hurt"><p style="font-size:19px;color: rgba(0,0,0,0.6);">大众好评</p></div>
+    <div class="comment">
+
+    </div>
+</div>

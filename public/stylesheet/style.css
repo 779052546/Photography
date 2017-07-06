@@ -9,39 +9,39 @@ a {
   color: #00B7FF;
 }
 /*header*/
-header{
+header.layout{
   width: 100%;
   height: 48px;
   background: #fdf0f0;
   position: relative;
 }
-header .h-tu{
+header.layout .h-tu{
   width: 390px;
   height: 100%;
   /*border:1px solid salmon;*/
   position: absolute;
 }
 @media screen and (min-width: 1200px){
-  header .h-tu{
+  header.layout .h-tu{
     right:445px;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1200px){
-  header .h-tu{
+  header.layout .h-tu{
     right:18%;
   }
 }
 @media screen and (min-width: 960px) and (max-width: 1000px){
-  header .h-tu{
+  header.layout .h-tu{
     right:0%;
   }
 }
 @media screen and (max-width: 960px){
-  header .h-tu{
+  header.layout .h-tu{
     display: none;
   }
 }
-header a{
+header.layout a{
   display: inline-block;
   text-align: center;
   width: 50px;
@@ -51,7 +51,7 @@ header a{
   color:rgba(0,0,0,0.7);
   font-size:13px;
 }
-header .h-tu div{
+header.layout .h-tu div{
   display: inline-block;
   width: 36px;
   height: 29px;
@@ -59,13 +59,13 @@ header .h-tu div{
   margin-bottom:-5px;
   background: url("../images/layout/icon00.png") no-repeat -10px 0;
 }
-header .h-tu div.h-weixin{
+header.layout .h-tu div.h-weixin{
   background-position: -88px 0;
 }
-header .h-tu div.h-qq{
+header.layout .h-tu div.h-qq{
   background-position: -47px 0;
 }
-header .h-tu span.h-tel{
+header.layout .h-tu span.h-tel{
   display: inline-block;
   width: 148px;
   /*border:1px solid lime;*/
@@ -75,30 +75,30 @@ header .h-tu span.h-tel{
   font-size:18px;
 }
 /*导航栏nav*/
-nav{
+nav.layout#layout{
     width: 100%;
     height: 198px;
 }
-header .nav{
+.nav.layout#layout{
     width: 100%;
     height: 100%;
 }
-nav .nav div.tata-logo{
+nav.layout#layout .nav div.tata-logo{
     width: 244px;
     height: 94px;
     margin:10px auto;
 }
-nav .nav .navlist{
+nav.layout#layout .nav .navlist{
     width: 1080px;
     height:28px;
     margin:10px auto;
 }
-nav .nav .navlist ul{
+nav.layout#layout .nav .navlist ul{
     width: 100%;
     height: 100%;
     list-style: none;
 }
-nav .nav .navlist ul li{
+nav.layout#layout .nav .navlist ul li{
     text-align: center;
     float: left;
     width: 120px;
@@ -106,7 +106,7 @@ nav .nav .navlist ul li{
     /*background:yellow;*/
     line-height: 28px;
 }
-nav .nav .navlist ul li a,nav .nav .navlist ul li p{
+nav.layout#layout .nav .navlist ul li a,nav .nav .navlist ul li p{
     text-decoration: none;
     color:rgba(0,0,0,0.5);
     font-size:16px;
@@ -115,36 +115,36 @@ nav .nav .navlist ul li a,nav .nav .navlist ul li p{
     height: 100%;
     background: #fff;
 }
-nav .nav .navlist ul li>div{
+nav.layout#layout .nav .navlist ul li>div{
     width: 100%;
     height: 120px;
     position: relative;
     background: #fff;
     display: none;
 }
-nav .nav .navlist ul li>div>div{
+nav.layout#layout .nav .navlist ul li>div>div{
     height: 46px;
     line-height:46px;
     position: relative;
     z-index: 999;
 }
-nav .nav .bg{
+nav.layout#layout .nav .bg{
     width: 100%;
     height: 60px;
     background: #f1d9d9;
 
 }
-nav .nav .navlist ul li a:hover{
+nav.layout#layout .nav .navlist ul li a:hover{
     color:#fdc3c3;
 }
 /*页脚footer*/
-footer .f-top{
+footer.layout .f-top{
   width: 100%;
   height: 440px;
   background: #fbfbfb;
   padding:40px 0;
 }
-footer .f-top .f-contant{
+footer.layout .f-top .f-contant{
   border:1px solid #dbdbdb;
   width: 90%;
   margin:0px 4%;
@@ -152,62 +152,62 @@ footer .f-top .f-contant{
   border-sizing:border-box;
   position: relative;
 }
-footer .f-top .f-contant>div.b{
+footer.layout .f-top .f-contant>div.b{
     width:40px;
     height:40px;
     position: absolute;
     background: url("../images/layout/Section5_01.gif") no-repeat;
     z-index: 9;
 }
-footer .f-top .f-contant>div.b1{
+footer.layout .f-top .f-contant>div.b1{
     left:-2px;
     top:-2px;
 }
-footer .f-top .f-contant>div.b2{
+footer.layout .f-top .f-contant>div.b2{
     background: url("../images/layout/Section5_02.gif") no-repeat;
     right:-2px;
     top:-2px;
 }
-footer .f-top .f-contant>div.b3{
+footer.layout .f-top .f-contant>div.b3{
     background: url("../images/layout/Section5_03.gif") no-repeat;
     top: 320px;
     left:-2px;
 }
-footer .f-top .f-contant>div.b4{
+footer.layout .f-top .f-contant>div.b4{
     background: url("../images/layout/Section5_04.gif") no-repeat;
     top:320px;
     right:-2px;
 }
-footer .f-top .f-contant .gotop{
+footer.layout .f-top .f-contant .gotop{
     display: table;
     margin:0 auto;
     position: relative;
     top:-12px;
 }
-footer .f-top .f-contant .f-tel{
+footer.layout .f-top .f-contant .f-tel{
    top:0px;
 }
-footer .f-top .f-content{
+footer.layout .f-top .f-content{
     width: 1000px;
     margin:20px auto;
     height: 166px;
 }
-footer .f-top .f-content .left,footer .f-top .f-content .right{
+footer.layout .f-top .f-content .left,footer .f-top .f-content .right{
     float: left;
 }
-footer .f-top .f-content .right{
+footer.layout .f-top .f-content .right{
     width: 560px;
     display: table;
     float:right;
     position: relative;
 }
-footer .f-top .f-content .right p.tip{
+footer.layout .f-top .f-content .right p.tip{
     height: 22px;
     line-height: 22px;
     position: relative;
     margin-bottom: 18px;
 }
-footer .f-top .f-content .right p.tip::before{
+footer.layout .f-top .f-content .right p.tip::before{
     display: inline-block;
     content: '';
     width: 22px;
@@ -216,16 +216,16 @@ footer .f-top .f-content .right p.tip::before{
     position: relative;
     top:4px;
 }
-footer .f-top .f-content .right from{
+footer.layout .f-top .f-content .right from{
     position: relative;
     display: block;
     width: 560px;
     height: 80px;
 }
-footer .f-top .f-content .right from p{
+footer.layout .f-top .f-content .right from p{
     font-size:22px;
 }
-footer .f-top .f-content .right from input{
+footer.layout .f-top .f-content .right from input{
     width: 240px;
     height: 32px;
     line-height: 32px;
@@ -234,7 +234,7 @@ footer .f-top .f-content .right from input{
     padding-left:4px;
     font-size:14px;
 }
-footer .f-top .f-content .right from button{
+footer.layout .f-top .f-content .right from button{
     position: absolute;
     right: 0px;
     top:50%;
@@ -247,38 +247,38 @@ footer .f-top .f-content .right from button{
     background: url("../images/layout/reg_now.png");
 }
 /*footer f-bottom 栅格化布局*/
-footer .f-bottom{
+footer.layout .f-bottom{
   width: 100%;
   height: 540px;
   background: #fdf0f0;
   padding:48px 0;
 }
-footer .f-bottom .container{
+footer.layout .f-bottom .container{
   width: 960px;
   height: 327px;
   /*background: lime;*/
 }
-footer .f-bottom .container .row{
+footer.layout .f-bottom .container .row{
   height: 100%;
 }
-footer .f-bottom .container .row>div{
+footer.layout .f-bottom .container .row>div{
   height: 100%;
 }
-footer .f-bottom .container .row .left{
+footer.layout .f-bottom .container .row .left{
     /*background: orange;*/
     position: relative;
 }
-footer .f-bottom .container .row .left img.title,footer .f-bottom .container .row .right img.title{
+footer.layout .f-bottom .container .row .left img.title,footer .f-bottom .container .row .right img.title{
     position: relative;
     left:50%;
     transform: translateX(-50%);
     margin:5px 0px 10px;
 }
-footer .f-bottom .container .row .left p.tel{
+footer.layout .f-bottom .container .row .left p.tel{
     font-size:30px;
     position: relative;
 }
-footer .f-bottom .container .row .left p.tel::before,footer .f-bottom .container .row .left div.dizhi p:first-child::before{
+footer.layout .f-bottom .container .row .left p.tel::before,footer .f-bottom .container .row .left div.dizhi p:first-child::before{
     content: '';
     display: inline-block;
     width: 31px;
@@ -287,27 +287,27 @@ footer .f-bottom .container .row .left p.tel::before,footer .f-bottom .container
     position: relative;
     top:12px;
 }
-footer .f-bottom .container .row .left div.dizhi p:first-child::before{
+footer.layout .f-bottom .container .row .left div.dizhi p:first-child::before{
      background: url("../images/layout/script_new_index01.png") -43px -1px;
  }
-footer .f-bottom .container .row .left div.dizhi p{
+footer.layout .f-bottom .container .row .left div.dizhi p{
     font-size:17px;
    line-height: 30px;
 }
-footer .f-bottom .container .row .left div.icon{
+footer.layout .f-bottom .container .row .left div.icon{
     width: 304px;
     position: absolute;
     left:50%;
     transform: translateX(-50%);
     bottom:30px;
 }
-footer .f-bottom .container .row .left div.icon a{
+footer.layout .f-bottom .container .row .left div.icon a{
     margin:20px 20px;
 }
-footer .f-bottom .fridendlink a{
+footer.layout .f-bottom .fridendlink a{
     color:rgba(0,0,0,0.6);
 }
-footer .f-bottom .fridendlink a:hover{
+footer.layout .f-bottom .fridendlink a:hover{
     text-decoration: none;
     color:rgb(228,207,207);
 }
