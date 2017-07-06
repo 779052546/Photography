@@ -74,6 +74,69 @@ header .h-tu span.h-tel{
   position: absolute;
   font-size:18px;
 }
+/*导航栏nav*/
+nav{
+    width: 100%;
+    height: 198px;
+}
+header .nav{
+    width: 100%;
+    height: 100%;
+}
+nav .nav div.tata-logo{
+    width: 244px;
+    height: 94px;
+    margin:10px auto;
+}
+nav .nav .navlist{
+    width: 1080px;
+    height:28px;
+    margin:10px auto;
+}
+nav .nav .navlist ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+nav .nav .navlist ul li{
+    text-align: center;
+    float: left;
+    width: 120px;
+    height: 100%;
+    /*background:yellow;*/
+    line-height: 28px;
+}
+nav .nav .navlist ul li a,nav .nav .navlist ul li p{
+    text-decoration: none;
+    color:rgba(0,0,0,0.5);
+    font-size:16px;
+    display: block;
+    width: 112px;
+    height: 100%;
+    background: #fff;
+}
+nav .nav .navlist ul li>div{
+    width: 100%;
+    height: 120px;
+    position: relative;
+    background: #fff;
+    display: none;
+}
+nav .nav .navlist ul li>div>div{
+    height: 46px;
+    line-height:46px;
+    position: relative;
+    z-index: 999;
+}
+nav .nav .bg{
+    width: 100%;
+    height: 60px;
+    background: #f1d9d9;
+
+}
+nav .nav .navlist ul li a:hover{
+    color:#fdc3c3;
+}
 /*页脚footer*/
 footer .f-top{
   width: 100%;
