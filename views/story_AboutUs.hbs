@@ -1,12 +1,64 @@
 <style>
     section{
-        width: 100%;
         padding: 30px 0 30px 0;
     }
     #map{
         max-width:1005px;
         height:580px;
         border:10px solid #fdf0f0;
+    }
+    section .about_ico{
+        margin-top: 20px;
+        position: relative;
+    }
+    /*section p{*/
+        /*position: absolute;*/
+        /*left:55px;*/
+        /*overflow: hidden;*/
+    /*}*/
+    /*.address{*/
+        /*top:10px;*/
+    /*}*/
+    /*.Url{*/
+        /*!*top: 55px;*!*/
+    /*}*/
+    @media(min-width:680px){
+        #desc p{
+            width: 400px;
+            overflow: hidden;
+        }
+    }
+    #desc{
+        font-size: 18px;
+        position: absolute;
+        left:60px;
+    }
+    #desc p{
+        line-height: 43px;
+        width:880px;
+        /*min-width: 320px;*/
+        /*border:1px solid;*/
+        word-break: keep-all;
+        white-space: nowrap;
+    }
+
+    #desc p span b{
+        color: red;
+    }
+    #desc p.address span{
+        display: inline-block;
+    }
+    #desc p.address .slagshipStore{
+        margin-left:40px;
+    }
+    .erweima{
+        height:300px;
+        position: relative;
+        top:50px;
+    }
+    .erweima img{
+        display: block;
+        margin:0 auto;
     }
 </style>
 <script src="http://api.map.baidu.com/api?v=1.2" type="text/javascript"></script>
@@ -20,6 +72,8 @@
         map.addControl(new BMap.OverviewMapControl());
         var point =new BMap.Point(112.415611, 34.661086);
         map.centerAndZoom(point,15);
+        var infoWindow = new BMap.InfoWindow("洛阳他她婚纱摄影 <br> 洛阳市涧西区辽宁路 <br> 华阳商铺2期115-116号");    // 创建信息窗口对象
+        map.openInfoWindow(infoWindow,point);                 //开启信息窗口
         var marker = new BMap.Marker(point);
         map.addOverlay(marker);
     }
@@ -28,7 +82,34 @@
 <!-- 百度地图地图容器-->
 <section class="container">
     <div id="map"></div>
-    <div class="about_ico">
-
+    <div class="container-fluid about_ico">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="media">
+                    <a href="#" class="pull-left"><img src="/images/Story/about_ico.jpg" class="media-object" alt='' /></a>
+                    <div class="media-body" id="desc">
+                        <p class="address">
+                            <span class="handShop"><b>总店：</b>洛阳市涧西区辽宁路华阳商铺2期115-116号</span>
+                            <span class="slagshipStore"><b>旗舰店：</b>洛阳市涧西区万达广场室外步行街3楼16-19号</span>
+                        </p>
+                        <p class="Url">
+                            <span><b>网址：</b>www.lytata.com</span>
+                        </p>
+                        <p class="workTime">
+                            <span><b>我们的工作时间：</b>7:40 -- 19:00</span>
+                        </p>
+                        <p class="hotLine">
+                            <span><b>预约热线：</b>400-0520-356</span>
+                        </p>
+                        <p class="qq">
+                            <span><b>企业QQ：</b>800168025</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="erweima">
+        <img src="/images/Story/TataWeixin.gif" alt="">
     </div>
 </section>
