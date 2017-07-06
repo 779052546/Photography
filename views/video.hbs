@@ -1,5 +1,9 @@
 <link href="/stylesheet/video-js.css" rel="stylesheet" type="text/css">
 <style>
+    *{
+        margin:0;
+        padding:0;
+    }
     .container .logo{
         width:100%;
         margin:30px 0;
@@ -15,6 +19,46 @@
     .container .video img{
         height:52px;
     }
+    .container .allvideo ul{
+        list-style: none;
+        margin-bottom:200px;
+    }
+    .container .allvideo ul li{
+        margin-top:40px;
+        border-bottom:1px dashed #ccc;
+    }
+    .container .allvideo ul li a h2{
+        color: black;
+        /*font-weight: block;*/
+    }
+    .container .allvideo ul li .videoPicture{
+        width: 100%;
+        height: 480px;
+        border:1px solid #ccc;
+        position: relative;
+        margin-top:40px;
+    }
+    .container .allvideo ul li .videoPicture a{
+        display: block;
+        width:100%;
+        height: 100%;
+    }
+    .container .allvideo ul li .videoPicture a .videoIco{
+        width:100%;
+        height:100%;
+    }
+    .container .allvideo ul li .videoPicture a .videoButton{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left:50%;
+        top:50%;
+        margin-left: -50px;
+        margin-top: -50px;
+    }
+    .container .allvideo ul li .c_mark{
+        margin-top: 10px;
+    }
 </style>
 <div class="container">
     <div class="logo">
@@ -26,14 +70,36 @@
     <div class="allvideo">
         <ul>
             <li>
-                <a href="#"><h3>2015洛阳他她摄影全新启幕</h3></a>
-                <div>
+                <a href="#"><h2>2015洛阳他她摄影全新启幕</h2></a>
+                <div class="videoPicture">
                     <a href="http://player.youku.com/player.php/sid/XMTI3OTg3MjIwOA==/v.swf">
-                        <img src="/images/video/videoButton.png" alt="">
+                        <img src="/images/video/videoButton.png" alt="" class="videoButton">
+                        <img class="videoIco" src="http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150709100753956424071_920_500.gif" />
                     </a>
                 </div>
+                <p class="c_mark">洛阳他她影视出品</p>
+            </li>
+            <li>
+                <a href="#"><h2>2015洛阳他她摄影全新启幕</h2></a>
+                <div class="videoPicture">
+                    <a href="http://player.youku.com/player.php/sid/XMTI3OTg3MjIwOA==/v.swf">
+                        <img src="/images/video/videoButton.png" alt="" class="videoButton">
+                        <img class="videoIco" src="http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150707074805077728713_920_500.jpg" />
+                    </a>
+                </div>
+                <p class="c_mark">洛阳他她影视出品</p>
+            </li>
+            <li>
+                <a href="#"><h2>2015洛阳他她摄影全新启幕</h2></a>
+                <div class="videoPicture">
+                    <a href="http://player.youku.com/player.php/sid/XMTI3OTg3MjIwOA==/v.swf">
+                        <img src="/images/video/videoButton.png" alt="" class="videoButton">
+                        <img class="videoIco" src="http://www.lytata.com/Upload/uploadify/D_Video_Video_Img/20150707072120914073715_920_500.jpg" />
+                    </a>
+                </div>
+                <p class="c_mark">洛阳他她影视出品</p>
             </li>
         </ul>
     </div>
 </div>
-<script src="/js/video.js"></script>
+<script src="/js/video.min.js"></script>
