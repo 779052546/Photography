@@ -94,16 +94,18 @@ div.bottom{
 .container .bottom li span{
     display: inline-block;
     margin-top:10px;
-    font-size:18px;
+    font-size:16px;
     width: 140px;
     height: 36px;
     background-color: #f7dcdc;
     color: #6f6e7f;
     line-height:36px;
-    transition: backgroundColor 1s ease 0s ;
+    opacity:1;
+    transition: all 1s ease 0s ;
 }
 .container .bottom li:hover span{
     color: #fff;
     background-color: #666;
+    opacity:0.4;
 }
 </style>
