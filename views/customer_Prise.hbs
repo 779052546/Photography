@@ -1,6 +1,6 @@
 <style>
     .customer_Prise{
-        width:844px;
+        width:1004px;
         margin:10px auto;
         /*background: #a6e1ec;*/
     }
@@ -52,14 +52,27 @@
     .customer_Prise .hurt{
         width: 120px;
         position: relative;
-        margin:-10px auto;
+        margin:-10px auto 58px;
     }
     .customer_Prise .hurt::before{
         content:'';
         display: inline-block;
         width: 20px;
         height: 20px;
-        background: url("http://www.lytata.com/Content/Img/Web/Section11_03.gif" ) no-repeat;
+        background: url("/images/customer/Section11_03.gif" ) no-repeat;
+        position: absolute;
+        top:3px;
+        left:-32px;
+    }
+    .customer_Prise .hurt::after{
+        content:'';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url("/images/customer/Section11_03.gif" ) no-repeat;
+        position: absolute;
+        top:3px;
+        right:6px;
     }
 </style>
 <div class="customer_Prise">
@@ -72,6 +85,7 @@
         <div><a href="/http://www.lytata.com/PingLun/DZHP">微博好评</a></div>
     </div>
     <div class="hurt"><p style="font-size:19px;color: rgba(0,0,0,0.6);">大众好评</p></div>
+    <!--评论-->
     <div class="comment">
 
     </div>
