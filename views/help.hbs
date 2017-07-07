@@ -10,17 +10,19 @@
         margin:40px auto;
     }
     .customer_Prise .cus-a{
-        width: 492px;
+        width: 90%;
         height: 60px;
         line-height:86px;
-        /*background:#00B7FF;*/
-        margin:60px auto;
+        margin:30px auto;
+        /*background: pink;*/
     }
     .customer_Prise .cus-a>div{
         float: left;
         text-align: center;
+        /*background:#00B7FF;*/
         width: 90px;
         height: 100%;
+        margin-left: 10px;
         border-bottom:2px solid #e4cfcf;
     }
     .customer_Prise .cus-a>div:not(:last-child){
@@ -53,7 +55,7 @@
     .customer_Prise .hurt{
         width: 120px;
         position: relative;
-        margin:-10px auto 58px;
+        margin:60px auto 58px;
     }
     .customer_Prise .hurt::before{
         content:'';
@@ -63,7 +65,7 @@
         background: url("/images/customer/Section11_03.gif" ) no-repeat;
         position: absolute;
         top:3px;
-        left:-32px;
+        left:-15px;
     }
     .customer_Prise .hurt::after{
         content:'';
@@ -72,23 +74,60 @@
         height: 20px;
         background: url("/images/customer/Section11_03.gif" ) no-repeat;
         position: absolute;
+        right:-15px;
         top:3px;
-        right:6px;
+    }
+    .comment{
+        background-color: pink;
+        width:100%;
+        height:auto;
     }
 </style>
-<div class="customer_Prise">
+<div class="customer_Prise" ng-app="myApp">
     <div class="cus-img">
         <img src="/images/help/Section15.gif" alt="">
     </div>
-    <div class="cus-a">
-        <div><a href="tp://www.lytata.com/PingLun/DZHP">预约流程</a></div>
-        <div><a href="tp://www.lytata.com/PingLun/DZHP">拍摄细节</a></div>
-        <div><a href="tp://www.lytata.com/PingLun/DZHP">外地专享</a></div>
-        <div><a href="tp://www.lytata.com/PingLun/DZHP">付款方式</a></div>
-        <div><a href="tp://www.lytata.com/PingLun/DZHP">求财若渴</a></div>
-    </div>
-    <div class="hurt"><p style="font-size:19px;color: rgba(0,0,0,0.6);">预约流程</p></div>
-    <div class="comment">
-
-    </div>
+   <div ng-controller="myCtrl">
+       <div class="cus-a">
+           <div ng-repeat="information in informationList">
+               <a ng-href="\{{information.href}}" ng-click="selectName(information.name)" ng-moduel="information.name">\{{information.name}}</a>
+           </div>
+       </div>
+       <div class="hurt"><p style="font-size:19px;color: rgba(0,0,0,0.6);">\{{name}}</p></div>
+       <div class="comment">
+            <div ng-view></div>
+       </div>
+   </div>
 </div>
+<script src="/js/angular.min.js"></script>
+<script src="/js/angular-route.min.js"></script>
+<script>
+    var app = angular.module('myApp',['ngRoute']);
+    app.controller('myCtrl',function($scope){
+        $scope.name = "预约流程";
+        $scope.informationList = [
+            {name:'预约流程',href:'#!/'},
+            {name:'拍摄细节',href:'#!/details'},
+            {name:'外地专享',href:'#!/exclusive'},
+            {name:'付款方式',href:'#!/apply'},
+            {name:'求才若渴',href:'#!/invite'},
+        ];
+        $scope.selectName = function(name){
+            console.log(name);
+            $scope.name = name;
+        }
+    });
+    app.config(function($routeProvider){
+        $routeProvider.when('/',{
+            templateUrl:'/views/index.html',
+        }).when('/details',{
+            templateUrl:'/views/details.html',
+        }).when('/exclusive',{
+            templateUrl:'/views/exclusive.html',
+        }).when('/apply',{
+            templateUrl:'/views/apply.html',
+        }).when('/invite',{
+            templateUrl:'/views/invite.html',
+        })
+    })
+</script>
