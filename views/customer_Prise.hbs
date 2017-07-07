@@ -74,19 +74,97 @@
         top:3px;
         right:6px;
     }
+    /**请求数据，评论***************************************************************/
+    .customer_Prise .comment{
+        border-left:3px solid #fdfdfd;
+        border-right:3px solid #fdfdfd;
+        width: 100%;
+        padding:2px 20px 0px 20px;
+    }
+    .customer_Prise  .comment div.head-img,.comment div.com-content{
+        float: left;
+    }
+    div.head-img img{
+        margin-right:18px;
+        width: 70px;
+        height:70px;
+        border-radius: 6px;
+    }
+    .customer_Prise .comment div.com-content{
+        width: 800px;
+        height: 316px;
+        position: relative;
+    }
+    .customer_Prise .comment div.com-content ul li{
+        float: left;
+        margin-right:10px;
+    }
+    .customer_Prise .comment div.com-content p{
+        font-size:15px;
+    }
+    .customer_Prise .comment div.com-content p.com-name{
+        width: 100%;
+        height: 34px;
+        background: #f3f3f3;
+        line-height: 34px;
+        color:#c2c3e7;
+        text-indent: 1em;
+        letter-spacing:3px;
+        margin-bottom: 10px;
+    }
+    .customer_Prise .comment div.com-content>p:nth-child(2) span{
+        display: inline-block;
+        width: 100px;
+        margin-right:18px;
+    }
+    .customer_Prise .comment div.com-content>p:nth-child(3){
+        margin-bottom:16px;
+    }
+    .customer_Prise .comment div.com-content ul li img{
+        width: 100px;
+        height: 100px;
+    }
+    .customer_Prise .comment div.com-content>p.time-price{
+        position: absolute;
+        bottom:-2px;
+        color:#9d9d9d;
+    }
+    .customer_Prise .comment div.com-content>p.time-price span{
+        margin-right: 16px;
+    }
+    font{
+        color:#ff0800;
+    }
 </style>
-<div class="customer_Prise">
+<div class="customer_Prise" ng-app="myApp" ng-controller="myCtrl">
     <div class="cus-img">
         <img src="/images/customer/customer.gif" alt="">
     </div>
     <div class="cus-a">
-        <div><a href="/http://www.lytata.com/PingLun/DZHP">大众好评</a></div>
-        <div><a href="/http://www.lytata.com/PingLun/DZHP">微信好评</a></div>
-        <div><a href="/http://www.lytata.com/PingLun/DZHP">微博好评</a></div>
+        <div ng-repeat="l in lei"><a ng-href="\{{l.href}}" ng-model="l.name" ng-click="qiehuan(l.name)">\{{l.name}}</a></div>
     </div>
-    <div class="hurt"><p style="font-size:19px;color: rgba(0,0,0,0.6);">大众好评</p></div>
-    <!--评论-->
-    <div class="comment">
+    <div class="hurt"><p style="font-size:19px;color: rgba(0,0,0,0.6);">\{{name}}</p></div>
 
-    </div>
+    <div ng-view></div>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-route.min.js"></script>
+    <script>
+        var app = angular.module('myApp',['ngRoute']);
+        app.controller('myCtrl',function($scope) {
+            $scope.name='大众好评';
+            $scope.lei=[{name:'大众好评',href:'#!/'},{name:'微信好评',href:'#!/weixin'},{name:'微博好评',href:'#!/weibo'}];
+            $scope.qiehuan=function (name) {
+                $scope.name=name;
+            }
+        })
+        app.config(function ($routeProvider) {
+            $routeProvider.when('/',{
+                templateUrl:'/views/customer/index.html'
+            }).when('/weixin',{
+                templateUrl:'/views/customer/weixin.html'
+            }).when('/weibo',{
+                templateUrl:'/views/customer/weibo.html'
+            })
+        })
+    </script>
 </div>
