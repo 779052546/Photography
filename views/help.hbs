@@ -78,7 +78,7 @@
         top:3px;
     }
     .comment{
-        background-color: pink;
+        /*background-color: pink;*/
         width:100%;
         height:auto;
     }
@@ -119,15 +119,15 @@
     });
     app.config(function($routeProvider){
         $routeProvider.when('/',{
-            templateUrl:'/views/index.html',
+            templateUrl:'/views/help/index.html',
         }).when('/details',{
-            templateUrl:'/views/details.html',
+            templateUrl:'/views/help/details.html',
         }).when('/exclusive',{
-            templateUrl:'/views/exclusive.html',
+            templateUrl:'/views/help/exclusive.html',
         }).when('/apply',{
-            templateUrl:'/views/apply.html',
+            templateUrl:'/views/help/apply.html',
         }).when('/invite',{
-            templateUrl:'/views/invite.html',
+            templateUrl:'/views/help/invite.html',
         })
     })
 </script>
