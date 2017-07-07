@@ -11,6 +11,9 @@ router.get('/story_ContactUs',function(req,res){
 router.get('/story_AboutUs',function(req,res){
     res.render('story_AboutUs', {});
 });
+router.get('/help',function(req,res){
+    res.render('help', {});
+});
 router.get('/customer_Prise',function (req,res) {
     res.render('customer_Prise',{});
 })

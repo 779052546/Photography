@@ -1,6 +1,8 @@
 <style>
-    section{
+    .wrap{
+        width: 1004px;
         padding: 30px 0 30px 0;
+        /*background-color: pink;*/
     }
     .ngbox a{
         width: 502px;
@@ -18,15 +20,9 @@
         height:580px;
         border:10px solid #fdf0f0;
     }
-    section .about_ico{
+    .wrap .about_ico{
         margin-top: 20px;
         position: relative;
-    }
-    @media(min-width:680px){
-        #desc p{
-            width: 400px;
-            overflow: hidden;
-        }
     }
     #desc{
         font-size: 18px;
@@ -35,9 +31,7 @@
     }
     #desc p{
         line-height: 43px;
-        width:880px;
-        /*min-width: 320px;*/
-        /*border:1px solid;*/
+        /*width:880px;*/
         word-break: keep-all;
         white-space: nowrap;
     }
@@ -80,7 +74,7 @@
     window.onload = initialize;
 </script>
 <!-- 百度地图地图容器-->
-<section class="container">
+<div class="wrap container">
     <div class="ngbox container">
         <a href="#!/ContactUs"><img src="/images/Story/brandStory.jpg" alt=""></a>
         <a href="#!/AboutUs"><img src="/images/Story/contactUs.jpg" alt=""></a>
@@ -116,4 +110,4 @@
     <div class="erweima">
         <img src="/images/Story/TataWeixin.gif" alt="">
     </div>
-</section>
+</div>
