@@ -1,17 +1,26 @@
 <style>
+    .container{
+        width:1004px;
+        padding: 30px 0 30px 0;
+        /*background-color: pink;*/
+    }
+    .ngbox{
+        width:100%;
+        overflow: hidden;
+    }
     .ngbox a{
-        width: 502px;
-        height:40px;
-        padding-top:20px;
+        width: 487px;
+        padding-top:10px;
         float: left;
+        /*background: green;*/
     }
     .ngbox a>img{
         display: block;
         margin: 0 auto;
 
     }
-    .container{
-        padding: 30px 0 30px 0;
+    .container #carousel-example-generic{
+
     }
     .container .carousel-indicators li{
         width:20px;
@@ -26,7 +35,9 @@
     .container .box{
         border:10px solid #fdf0f0;
         overflow: hidden;
-        width: 85%;
+    }
+    .container .box img{
+        margin:0 auto;
     }
     .container .about_tata{
         width:151px;
@@ -38,11 +49,11 @@
         padding:0;
     }
 </style>
-<div class="ngbox container">
-    <a href="#!/ContactUs"><img src="/images/Story/brandStory.jpg" alt=""></a>
-    <a href="#!/AboutUs"><img src="/images/Story/contactUs.jpg" alt=""></a>
-</div>
 <div class="container">
+    <div class="ngbox container">
+        <a href="#!/ContactUs"><img src="/images/Story/brandStory.jpg" alt=""></a>
+        <a href="#!/AboutUs"><img src="/images/Story/contactUs.jpg" alt=""></a>
+    </div>
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators" id="myol">
