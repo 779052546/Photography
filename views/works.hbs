@@ -9,45 +9,46 @@
     div.top img:nth-child(1){
         padding-top:30px;
     }
-    ul{
+    ul.xuanzhuan{
         list-style-type:none;
         width: 1028px;
         height: 1004px;
         margin:40px auto;
     }
-    li{
+    .xuanzhuan li{
         height: 300px;
         width: 300px;
         float: left;
         position: relative;
-        margin-top:40px;
+        margin-top:20px;
         cursor: pointer;
+        margin-right:30px;
     }
-    li>div{
+    .xuanzhuan li>div{
         height: 300px;
         width: 300px;
         background: url('/images/works/ablmty.png') no-repeat;
         margin-left:-16px;
     }
-    li img{
+    .xuanzhuan>li img{
         margin-left:24px;
         margin-top:23px;
         width: 250px;
         height: 250px;
         border-radius: 50%;
     }
-    li p{
+    .xuanzhuan>li>p{
         position: absolute;
         width: 140px;
         height: 60px;
         left: 50%;
         top: 50%;
-        margin-left:-90px;
+        margin-left:-70px;
         margin-top:-30px;
         padding:5px;
         background-color: rgba(222,222,222,0.9);
     }
-    li p span{
+    .xuanzhuan>li>p>span{
         display: block;
         width: 130px;
         height: 50px;
@@ -58,12 +59,12 @@
     }
 </style>
 
-<div class="container">
+<div class="container" style="width: 1004px;">
     <div class="top">
         <img src="/images/works/01.gif" alt=""><br>
         <img src="/images/works/02.gif" alt="">
     </div>
-    <ul>
+    <ul class="xuanzhuan">
         {{#each images}}
             <li class="col-xs-4 col-sm-4 col-md-4">
               <div>
@@ -72,17 +73,17 @@
                 <p><span>{{name}}</span></p>
             </li>
         {{/each}}
-    </ul>
+    </ulclass>
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/velocity.min.js"></script>
     <script>
-        $('li').each(function(){
+        $('.xuanzhuan li').each(function(){
             $(this).mouseenter(function(){
-                $('li div').eq($(this).index()).velocity({'rotateZ':'-35deg'},500);
+                $('.xuanzhuan li div').eq($(this).index()).velocity({'rotateZ':'-15deg'},500);
             });
             $(this).mouseleave(function(){
-                $('li div').eq($(this).index()).velocity({'rotateZ':'0deg'},500);
+                $('.xuanzhuan li div').eq($(this).index()).velocity({'rotateZ':'0deg'},500);
             });
         })
     </script>
