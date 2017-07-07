@@ -83,6 +83,4 @@ router.get('/the-earth',function(req,res){
         {id:9,name:'三亚夏',src:'/images/the-earth/9.jpg'}
     ]});
 });
-
-
 module.exports = router;
