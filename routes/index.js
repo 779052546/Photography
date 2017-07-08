@@ -73,17 +73,29 @@ router.get('/enjoy',function(req,res){
     ]});
 });
 
-router.get('/the-earth',function(req,res){
-    res.render('the-earth', {images:[
-        {id:1,name:'大理管霄',src:'/images/the-earth/1.jpg'},
-        {id:2,name:'大理婉玉',src:'/images/the-earth/2.jpg'},
-        {id:3,name:'大理婉玉',src:'/images/the-earth/3.jpg'},
-        {id:4,name:'大理婉玉',src:'/images/the-earth/4.jpg'},
-        {id:5,name:'大理管霄',src:'/images/the-earth/5.jpg'},
-        {id:6,name:'大理宇洁',src:'/images/the-earth/6.jpg'},
-        {id:7,name:'三亚艳霞',src:'/images/the-earth/7.jpg'},
-        {id:8,name:'三亚洁',src:'/images/the-earth/8.jpg'},
-        {id:9,name:'三亚夏',src:'/images/the-earth/9.jpg'}
-    ]});
+router.get('/theEarth',function(req,res){
+    var imagesIn = [
+        {id:1,name:'大理管霄',src:'../images/the-earth/1.jpg'},
+        {id:2,name:'大理婉玉',src:'../images/the-earth/2.jpg'},
+        {id:3,name:'大理婉玉',src:'../images/the-earth/3.jpg'},
+        {id:4,name:'大理婉玉',src:'../images/the-earth/4.jpg'},
+        {id:5,name:'大理管霄',src:'../images/the-earth/5.jpg'},
+        {id:6,name:'大理宇洁',src:'../images/the-earth/6.jpg'},
+        {id:7,name:'三亚艳霞',src:'../images/the-earth/7.jpg'},
+        {id:8,name:'三亚洁',src:'../images/the-earth/8.jpg'},
+        {id:9,name:'三亚夏',src:'../images/the-earth/9.jpg'}
+    ];
+    var imagesOut = [
+        {id:1,name:'巴厘岛 齐欢',src:'../images/the-earth/Out/1.jpg'},
+        {id:2,name:'巴厘岛 齐欢',src:'../images/the-earth/Out/2.jpg'},
+        {id:3,name:'巴厘岛 齐欢',src:'../images/the-earth/Out/3.jpg'},
+        {id:4,name:'巴厘岛齐欢',src:'../images/the-earth/Out/4.jpg'},
+        {id:5,name:'巴厘岛 彭乐',src:'../images/the-earth/Out/5.jpg'},
+        {id:6,name:'巴厘岛彭乐',src:'../images/the-earth/Out/6.jpg'},
+        {id:7,name:'巴厘岛彭乐',src:'../images/the-earth/Out/7.jpg'},
+        {id:8,name:'普吉街道篇',src:'../images/the-earth/Out/8.jpg'},
+        {id:9,name:'普吉姐妹篇',src:'../images/the-earth/Out/9.jpg'}
+    ]
+    res.render('theEarth', {imagesIn:imagesIn,imagesOut:imagesOut});
 });
 module.exports = router;

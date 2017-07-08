@@ -1,10 +1,10 @@
-<style>
+
 div.container{
     width: 1004px;
 }
 .top{
     width: 1004px;
-    margin:20px auto;
+    margin:50px auto;
     text-align: center;
 }
 .top img{
@@ -26,6 +26,7 @@ div.container{
     height: 300px;
     text-align: center;
     position: relative;
+    cursor: pointer;
 }
 .center span p{
     position: absolute;
@@ -108,4 +109,3 @@ div.bottom{
     background-color: #666;
     opacity:0.4;
 }
-</style>
