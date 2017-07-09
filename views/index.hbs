@@ -149,11 +149,11 @@
     <div class="second-lunbo">
         <div class="cont">
             <ul>
-                <li class="act"><img src="/images/index/luun_10.jpg"></li>
-                <li><img src="/images/index/luun_6.jpg"></li>
-                <li><img src="/images/index/luun_7.jpg"></li>
-                <li><img src="/images/index/luun_8.jpg"></li>
-                <li><img src="/images/index/luun_9.jpg"></li>
+                <li class="act"><img src="http://www.lytata.com/Upload/uploadify/D_SlideShow_Slide_Img/20161019032951078307534.jpg"></li>
+                <li><img src="http://www.lytata.com/Upload/uploadify/D_SlideShow_Slide_Img/20161014043750140306708.jpg"></li>
+                <li><img src="http://www.lytata.com/Upload/uploadify/D_SlideShow_Slide_Img/20161014044737906453204.jpg"></li>
+                <li><img src="http://www.lytata.com/Upload/uploadify/D_SlideShow_Slide_Img/20160203075310552305203.jpg"></li>
+                <li><img src="http://www.lytata.com/Upload/uploadify/D_SlideShow_Slide_Img/20160804081434828386247.jpg"></li>
             </ul>
             <a href="javascript:;" class="bt bt-left"><</a>
             <a href="javascript:;" class="bt bt-right">></a>
@@ -164,7 +164,28 @@
         <div class="sectionTitle">
             <img src="/images/index/Section2.gif" alt="">
         </div>
-        <div class="global-body"></div>
+        <div class="global-body">
+            <ul class="xuanzhuan">
+                    <li class="col-xs-4 col-sm-4 col-md-4">
+                        <div>
+                            <img src="http://www.lytata.com/Upload/uploadify/D_Global_Globel_Img/20161012060759281448274_300_300.jpg">
+                        </div>
+                        <p><span>大理管宵</span></p>
+                    </li>
+                    <li class="col-xs-4 col-sm-4 col-md-4">
+                        <div>
+                            <img src="http://www.lytata.com/Upload/uploadify/D_Global_Globel_Img/20161013100610125143058_300_300.jpg">
+                        </div>
+                        <p><span>大理婉玉</span></p>
+                    </li>
+                    <li class="col-xs-4 col-sm-4 col-md-4">
+                        <div>
+                            <img src="http://www.lytata.com/Upload/uploadify/D_Global_Globel_Img/20161013093915078537420_300_300.jpg">
+                        </div>
+                        <p><span>大理婉玉</span></p>
+                    </li>
+            </ul>
+        </div>
     </div>
     <!--第七部分互动活动-->
     <div class="interact">
@@ -173,6 +194,9 @@
         </div>
         <div class="interact-body">
             <img src="/images/index/foot.jpg" alt="">
+            <div class='num1'></div>
+            <div class='num2'></div>
+            <div class='num3'></div>
         </div>
     </div>
 </section>
@@ -255,4 +279,24 @@
             }
         })
     });
+
+
+    $('.xuanzhuan li').each(function(){
+        $(this).mouseenter(function(){
+            $('.xuanzhuan li div').eq($(this).index()).velocity({'rotateZ':'-15deg'},500);
+        });
+        $(this).mouseleave(function(){
+            $('.xuanzhuan li div').eq($(this).index()).velocity({'rotateZ':'0deg'},500);
+        });
+    })
+
+    $('.num1').click(function(){
+        window.location.href = "https://kf1.gzsptc.com/";
+    })
+    $('.num2').click(function(){
+        window.location.href = "http://www.lytata.com/Activity/Detail/17";
+    })
+    $('.num3').click(function(){
+        window.location.href = "http://www.lytata.com/PingLun/DZHP";
+    })
 </script>

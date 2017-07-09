@@ -11,7 +11,7 @@ section{
 /*第一部分轮播*/
 section .cont>ul{
     position: relative;
-    height: 550px;
+    height: 550px !important;
     overflow: hidden;
 }
 section .cont>ul li{
@@ -24,7 +24,7 @@ section .cont>ul li.act{
 }
 section .cont>ul img{
     width: 100%;
-    height: 100%;
+    height: 550px;
 }
 section .cont{
     position: relative;
@@ -122,6 +122,16 @@ section .showpicture .showpicture-body ul>li>a{
     height:100%;
     text-decoration: none;
 }
+section .showpicture .showpicture-body ul>li>a .suofang{
+    overflow: hidden;
+}
+section .showpicture .showpicture-body ul>li>a .suofang:hover img{
+    animation: mykeya 2s linear;
+}
+@keyframes mykeya{
+    from{transform: scale(1,1);}
+    to{transform: scale(1.5,1.5);}
+}
 section .showpicture .showpicture-body ul>li>a .logo{
     display: block;
     margin:20px auto 0px;
@@ -156,7 +166,55 @@ section .global{
 section .global .global-body{
     margin-top: 20px;
     height:360px;
-    background-color: pink;
+    /*background-color: pink;*/
+}
+section .global .global-body ul.xuanzhuan{
+    list-style-type:none;
+    width: 1028px;
+    height: 1004px;
+    margin:40px auto;
+}
+section .global .global-body .xuanzhuan li{
+    height: 300px;
+    width: 300px;
+    float: left;
+    position: relative;
+    margin-top:20px;
+    cursor: pointer;
+    margin-right:30px;
+}
+section .global .global-body .xuanzhuan li>div{
+    height: 300px;
+    width: 300px;
+    background: url('/images/works/ablmty.png') no-repeat;
+    margin-left:-16px;
+}
+section .global .global-body .xuanzhuan>li img{
+    margin-left:24px;
+    margin-top:23px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+section .global .global-body .xuanzhuan>li>p{
+    position: absolute;
+    width: 140px;
+    height: 60px;
+    left: 50%;
+    top: 50%;
+    margin-left:-70px;
+    margin-top:-30px;
+    padding:5px;
+    background-color: rgba(222,222,222,0.9);
+}
+section .global .global-body .xuanzhuan>li>p>span{
+    display: block;
+    width: 130px;
+    height: 50px;
+    text-align:center;
+    line-height:50px;
+    border:1px solid #000;
+    font-size: 15px;
 }
 /*第七部分互动活动*/
 section .interact{
@@ -169,4 +227,22 @@ section .interact .interact-body{
     background-color: #fdf1f1;
     text-align: center;
     margin-top:20px;
+    position: relative;
+}
+section .interact .interact-body div{
+    width: 330px;
+    height: 330px;
+    float: left;
+    /*background-color: pink;*/
+    position: absolute;
+    top:0px;
+}
+section .interact .interact-body .num1{
+    left:180px;
+}
+section .interact .interact-body .num2{
+    left:510px;
+}
+section .interact .interact-body .num3{
+    left:840px;
 }
