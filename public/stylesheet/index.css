@@ -4,6 +4,10 @@ section{
     height:auto;
     /*background-color: pink;*/
 }
+.sectionTitle{
+    display: table;
+    margin:0 auto;
+}
 /*第一部分轮播*/
 section .cont>ul{
     position: relative;
@@ -16,6 +20,7 @@ section .cont>ul li{
 }
 section .cont>ul li.act{
     display: block;
+    text-align: center;
 }
 section .cont>ul img{
     width: 100%;
@@ -45,23 +50,67 @@ section .cont .bt-left{
 section .cont .bt-right{
     right: 0;
 }
+/*第二部分最新作品*/
+section .three-lunbo{
+    width: 1100px;
+    height: 440px;
+    margin:30px auto 0px;
+
+}
+section .three-lunbo #botton-scroll{
+    margin:10px auto;
+    width:940px;
+    height:364px;
+    overflow: hidden;
+    position: relative;
+}
+section .three-lunbo .featureul{
+    width: 4000px;
+    position: absolute;
+    left:0px;
+}
+section .three-lunbo .featureul li{
+    float: left;
+    margin-right:20px;
+}
+section .three-lunbo .featureul li .box{
+    width:300px;
+    height: 364px;
+    position: relative;
+}
+section .three-lunbo .arrow{
+    display: block;
+    width:25px;
+    height: 40px;
+    position: absolute;
+    top:150px;
+}
+section .three-lunbo .next{
+    right:0;
+}
+/*第三部分粉色大长条*/
+section .pink{
+    height:341px;
+    background: #fdf1f1;
+    text-align: center;
+    margin:30px auto 0px;
+}
 /*第四部分客片展示*/
 section .showpicture{
     width: 1004px;
+    height:518px;
+    /*background-color: yellow;*/
     margin: 30px auto 0px;
 }
-section .showpicture .showpicture-title{
-    display: table;
-    margin:0 auto;
-}
+
 section .showpicture .showpicture-body{
-    margin:40px auto;
+    margin:40px auto 0px;
 }
 section .showpicture .showpicture-body ul>li{
     height: 411px;
     display: block;
     width: 470px;
-    background-color: lime;
+    /*background-color: lime;*/
 }
 section .showpicture .showpicture-body ul>li:first-child{
     float: left;
@@ -73,24 +122,32 @@ section .showpicture .showpicture-body ul>li>a{
     display: block;
     width:100%;
     height:100%;
-    background-color: green;
+    text-decoration: none;
+    /*background-color: green;*/
 }
 section .showpicture .showpicture-body ul>li>a .logo{
     display: block;
-    margin:30px auto 0px;
+    margin:20px auto 0px;
 }
 section .showpicture .showpicture-body ul>li>a span{
     display: table;
-    /*width:123px;*/
-    /*height: 26px;*/
     border:1px solid #333;
-    /*margin:*/
+    margin: 10px auto 0px;
+    line-height:24px;
+    letter-spacing: 10px;
+    text-align: center;
+    color: black;
+    text-indent: 6px;
+}
+section .showpicture .showpicture-body ul>li>a span:hover{
+    background-color: lightgray;
 }
 /*第五部分大轮播*/
 section .second-lunbo{
     margin:30px auto 0px;
-    width:100px;
+    width:100%;
     height:550px;
+    background-color: blue;
 }
 /*第六部分环球拍*/
 section .global{
@@ -108,10 +165,6 @@ section .global .global-body{
 section .interact{
     margin: 30px auto 0px;
     height:500px;
-}
-section .interact .interact-title{
-    height: 68px;
-    text-align: center;
 }
 section .interact .interact-body{
     width: 100%;
