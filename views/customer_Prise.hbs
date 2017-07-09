@@ -59,7 +59,7 @@
         display: inline-block;
         width: 20px;
         height: 20px;
-        background: url('/images/customer/Section11_03.gif') no-repeat;
+        background: url("/images/customer/Section11_03.gif") no-repeat;
         position: absolute;
         top:3px;
         left:-32px;
@@ -84,9 +84,10 @@
         <div ng-repeat="l in lei"><a ng-href="\{{l.href}}" ng-model="l.name" ng-click="qiehuan(l.name)">\{{l.name}}</a></div>
     </div>
     <div class="hurt"><p style="font-size:19px;color: rgba(0,0,0,0.6);">\{{name}}</p></div>
+    <p>{{name}}</p>
 
     <div ng-view></div>
-
+</div>
     <script src="/js/angular.min.js"></script>
     <script src="/js/angular-route.min.js"></script>
     <script>
@@ -196,6 +197,5 @@
             }).when('/weibo',{
                 templateUrl:'/views/customer/weibo.html'
             })
-        })；
+        });
     </script>
-</div>
