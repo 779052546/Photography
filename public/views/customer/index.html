@@ -1,22 +1,109 @@
-<div class="comment">
-    <div class="head-img">
-        <img src="/images/customer/h1.jpg" alt="">
-    </div>
-    <div class="com-content">
-        <p class="com-name"><span>孟mxx</span></p>
-        <p><span class="sheying">摄影: <font>非常好</font></span><span class="zaoxing">造型:<font>非常好</font></span><span class="fuwu">服务:<font>非常好</font></span></p>
-        <p com-inner>
-            我的单号是W0267感谢化妆师楠楠，摄影师强子老师吗，灯光师林新还有勤劳的小秘书晓晓为我们忙前忙后、紧张辛苦了一整天（你们
-            是可爱的小天使，我要为你们点赞），虽然只看到强子老师加班给秀出的几张片子，但是已经被老师们的精心服务感动到，拍摄结束后
-            真心觉得他们太棒了，看我们整体的感觉会给我们推荐适合我们的风格，特别稀罕。特别感谢你们这个团队组合！！再次感谢你们，么么
-            哒！强力推荐，拍的特别棒，而且所有都有自己的风格感觉
-        </p>
-        <div class="imglist">
-            <ul style="list-style: none">
-                <li><img src="/images/customer/h2.jpg" alt=""></li>
-            </ul>
+<div class="comment" >
+    <style>
+        /**请求数据，评论***************************************************************/
+        .customer_Prise .comment{
+            border-left:3px solid #fdfdfd;
+            border-right:3px solid #fdfdfd;
+            width: 100%;
+            padding:2px 20px 0px 20px;
+        }
+        .customer_Prise  .comment div.head-img,.comment div.com-content{
+            float: left;
+        }
+        div.head-img img{
+            margin-right:18px;
+            width: 70px;
+            height:70px;
+            border-radius: 6px;
+        }
+        .customer_Prise .comment div.com-content{
+            width: 800px;
+            height: 316px;
+            position: relative;
+        }
+        .customer_Prise .comment div.com-content ul li{
+            float: left;
+            margin-right:10px;
+        }
+        .customer_Prise .comment div.com-content p{
+            font-size:15px;
+        }
+        .customer_Prise .comment div.com-content p.com-name{
+            width: 100%;
+            height: 34px;
+            background: #f3f3f3;
+            line-height: 34px;
+            color:#c2c3e7;
+            text-indent: 1em;
+            letter-spacing:3px;
+            margin-bottom: 10px;
+        }
+        .customer_Prise .comment div.com-content>p:nth-child(2) span{
+            display: inline-block;
+            width: 100px;
+            margin-right:18px;
+        }
+        .customer_Prise .comment div.com-content>p:nth-child(3){
+            margin-bottom:16px;
+        }
+        .customer_Prise .comment div.com-content ul li img{
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        .customer_Prise .comment div.com-content>p.time-price{
+            position: absolute;
+            bottom:-2px;
+            color:#9d9d9d;
+        }
+        .customer_Prise .comment div.com-content>p.time-price span{
+            margin-right: 16px;
+        }
+        font{
+            color:#ff0800;
+        }
+        .cur{
+            position: absolute;
+            left:50%;
+            transform: translateX(-50%);
+            opacity: 1 !important;
+            z-index: 999;
+        }
+        .button{
+            width: 100px;
+            height: 20px;
+            margin:0 auto;
+        }
+        .button span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            color:orchid;
+            background: yellow;
+            text-align: center;
+            cursor: pointer;
+
+        }
+        .button span:not(:last-child){
+            margin-right: 20px;
+        }
+    </style>
+    <div class="customer_Prise" ng-app="myApp" ng-controller="myCtrl" ng-repeat="dz in dazhong">
+        <div class="head-img">
+            <img src='\{{dz.head}}' alt="">
         </div>
-        <p class="time-price"><span class="price">套餐价格：5599元</span><span class="time">时间:16-10-12 16:28 他她摄影机构</span></p>
+        <div class="com-content">
+            <p class="com-name"><span>{{dz.name}}</span></p>
+            <p><span class="sheying">摄影: <font>{{dz.sheying}}</font></span><span class="zaoxing">造型:<font>{{dz.zaoxing}}</font></span><span class="fuwu">服务:<font>{{dz.fuwu}}</font></span></p>
+            <p com-inner>{{dz.coment}}</p>
+            <div class="imglist" ng-repeat="img in dz.imglist">
+                <ul style="list-style: none">
+                    <li><img src="\{{img.src}}" alt=""  ng-click="showBig($event)" class="img"></li>
+                </ul>
+            </div>
+            <p class="time-price"><span class="price">套餐价格：{{dz.price}}</span><span class="time">时间:{{dz.time}} 他她摄影机构</span></p>
+        </div>
+        <div style="clear: both;"></div>
     </div>
 </div>
-<div style="clear: both;"></div>
