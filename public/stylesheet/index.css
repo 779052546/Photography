@@ -123,7 +123,6 @@ section .showpicture .showpicture-body ul>li>a{
     width:100%;
     height:100%;
     text-decoration: none;
-    /*background-color: green;*/
 }
 section .showpicture .showpicture-body ul>li>a .logo{
     display: block;
