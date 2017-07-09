@@ -20,7 +20,6 @@
         text-align: center;
         width: 90px;
         height: 100%;
-        border-bottom:2px solid #e4cfcf;
     }
     .customer_Prise .cus-a>div:not(:last-child){
         margin-right:96px;
@@ -81,11 +80,9 @@
         <img src="/images/customer/customer.gif" alt="">
     </div>
     <div class="cus-a">
-        <div ng-repeat="l in lei"><a ng-href="\{{l.href}}" ng-model="l.name" ng-click="qiehuan(l.name)">\{{l.name}}</a></div>
+        <div ng-repeat="l in lei"><a ng-href="\{{l.href}}" ng-model="l.name" ng-click="qiehuan(l.name,$event)">\{{l.name}}</a></div>
     </div>
     <div class="hurt"><p style="font-size:19px;color: rgba(0,0,0,0.6);">\{{name}}</p></div>
-    <p>{{name}}</p>
-
     <div ng-view></div>
 </div>
     <script src="/js/angular.min.js"></script>
@@ -95,8 +92,15 @@
         app.controller('myCtrl',function($scope,$rootElement) {
             $scope.name='大众好评';
             $scope.lei=[{name:'大众好评',href:'#!/'},{name:'微信好评',href:'#!/weixin'},{name:'微博好评',href:'#!/weibo'}];
-            $scope.qiehuan=function (name) {
-                $scope.name=name;
+            $scope.qiehuan=function (name,$event) {
+             if($event.target){
+                 $scope.name=name;
+                 console.log($($event.target).parent());
+                 $($event.target).parent().css("border-bottom","2px solid #e4cfcf");
+                 $($event.target) .parent().siblings().css("border-bottom","none");
+             }else{
+                 $($event.target).parent().css( "border-bottom","none");
+             }
             }
 
 //            大众
