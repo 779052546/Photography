@@ -97,7 +97,16 @@ router.get('/enjoy',function(req,res){
         res.render('enjoy', {images:results,photoAlbum,girlfriends,family});
     })
 });
-
+router.get('/enjoy:id',function(req,res) {
+    let sql = `SELECT * FROM enjoy WHERE id= ?`;
+    conn.query(sql, req.params.id, (err,results) => {
+        if (err) {
+            next(err, req, res);
+            return;
+        }
+        res.render('enjoy', {images: results[0]});
+    })
+})
 router.get('/theEarth',function(req,res){
     conn.query('SELECT * FROM earthin',(err,results)=>{
         if (err) {
