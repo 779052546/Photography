@@ -120,20 +120,20 @@
         <div style="clear: both;"></div>
     </div>
     <p ng-click="showMore($event)" class="plusmore">加载更多</p>
-    <div class="customer_Prise more1" ng-app="myApp" ng-controller="myCtrl" ng-repeat="dz in dazhong" style="display: none">
+    <div class="customer_Prise more1" ng-app="myApp" ng-controller="myCtrl" ng-repeat="dz2 in dazhong2" style="display: none">
         <div class="head-img">
-            <img src='\{{dz.head}}' alt="">
+            <img src='\{{dz2.head}}' alt="">
         </div>
         <div class="com-content">
-            <p class="com-name"><span>{{dz.name}}</span></p>
-            <p><span class="sheying">摄影: <font>{{dz.sheying}}</font></span><span class="zaoxing">造型:<font>{{dz.zaoxing}}</font></span><span class="fuwu">服务:<font>{{dz.fuwu}}</font></span></p>
-            <p com-inner>{{dz.coment}}</p>
-            <div class="imglist" ng-repeat="img in dz.imglist">
+            <p class="com-name"><span>{{dz2.name}}</span></p>
+            <p><span class="sheying">摄影: <font>{{dz2.sheying}}</font></span><span class="zaoxing">造型:<font>{{dz2.zaoxing}}</font></span><span class="fuwu">服务:<font>{{dz2.fuwu}}</font></span></p>
+            <p com-inner>{{dz2.coment}}</p>
+            <div class="imglist" ng-repeat="img in dz2.imglist">
                 <ul style="list-style: none">
                     <li><img src="\{{img.src}}" alt=""  ng-click="showBig($event)" class="img"></li>
                 </ul>
             </div>
-            <p class="time-price"><span class="price">套餐价格：{{dz.price}}</span><span class="time">时间:{{dz.time}} 他她摄影机构</span></p>
+            <p class="time-price"><span class="price">套餐价格：{{dz2.price}}</span><span class="time">时间:{{dz2.time}} 他她摄影机构</span></p>
         </div>
         <div style="clear: both;"></div>
     </div>
