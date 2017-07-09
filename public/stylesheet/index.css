@@ -110,7 +110,6 @@ section .showpicture .showpicture-body ul>li{
     height: 411px;
     display: block;
     width: 470px;
-    /*background-color: lime;*/
 }
 section .showpicture .showpicture-body ul>li:first-child{
     float: left;
