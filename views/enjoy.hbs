@@ -18,9 +18,9 @@
             {{#each images}}
                 <li class="col-xs-4 col-sm-4 col-md-4">
                     <div>
-                        <a href=""><img src="{{src}}"></a>
+                        <a href="/enjoy?id={{id}}"><img src="{{src}}"></a>
                     </div>
-                    <a href=""> <p><span>{{name}}</span></p></a>
+                    <a href="/enjoy?id={{id}}"> <p><span>{{id}}{{name}}</span></p></a>
                 </li>
             {{/each}}
         </ul>
@@ -44,7 +44,6 @@
                 </li>
             {{/each}}
         </ul>
-
         <ul id="u6" style="display: none;">
             {{#each family}}
                 <li class="col-xs-4 col-sm-4 col-md-4">
@@ -57,6 +56,8 @@
         </ul>
     </div>
 </div>
+
+
 
 <script>
     $('.b1').click(function(){
@@ -112,5 +113,7 @@
             $(this).velocity({'rotateZ':'0deg'},500);
         });
     }
+
+
 
 </script>
