@@ -56,6 +56,7 @@ router.get('/works',function(req,res){
     })
 });
 router.get('/enjoy',function(req,res){
+    console.log(req.query.id)
     conn.query('SELECT * FROM enjoy',(err,results)=>{
         if (err) {
             next(err,req,res);
@@ -97,14 +98,14 @@ router.get('/enjoy',function(req,res){
         res.render('enjoy', {images:results,photoAlbum,girlfriends,family});
     })
 });
-router.get('/enjoy:id',function(req,res) {
+router.get('/zhanshi',function(req,res,next) {
     let sql = `SELECT * FROM enjoy WHERE id= ?`;
-    conn.query(sql, req.params.id, (err,results) => {
+    conn.query(sql, req.query.id, (err,results) => {
         if (err) {
             next(err, req, res);
             return;
         }
-        res.render('enjoy', {images: results[0]});
+        res.render('zhanshi', {images: results});
     })
 })
 router.get('/theEarth',function(req,res){
